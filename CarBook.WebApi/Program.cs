@@ -10,6 +10,7 @@ builder.Services.AddScoped<CarBookContext>();
 
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
+//Servisleri ekleme
 builder.Services.AddScoped<GetAboutQueryHandler>();
 builder.Services.AddScoped<GetAboutByIdQueryHandler>();
 builder.Services.AddScoped<CreateAboutCommandHandler>();
