@@ -4,16 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarBook.Application.Features.CQRS.Queries.AboutQueries
+namespace CarBook.Application.Features.CQRS.Queries.BannerQueries
 {
-	public class GetAboutByIdQuery
+	public class GetBannerByIdQuery
 	{
-		public GetAboutByIdQuery(int id)
+		public GetBannerByIdQuery(int id)
 		{
 			Id = id;
 		}
 
 		public int Id { get; set; }
-
-    }
+	}
 }
