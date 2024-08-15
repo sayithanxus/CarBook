@@ -26,6 +26,7 @@ namespace CarBook.Application.Features.Mediator.Handlers.BlogHandlers
             return new GetBlogByIdQueryResult
             {
                 AuthorID= values.AuthorID,
+                Title = values.Title,
                 BlogID= values.BlogID,
                 CategoryID  = values.CategoryID,
                 CoverImageUrl= values.CoverImageUrl,

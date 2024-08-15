@@ -1,19 +1,19 @@
-﻿using CarBook.Domain.Entities;
-using MediatR;
+﻿using CarBook.Dto.BlogDto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarBook.Application.Features.Mediator.Commands.AuthorCommands
+namespace CarBook.Dto.AuthorDto
 {
-    public class UpdateAuthorCommand : IRequest
+    public class ResultAuthorDto
     {
         public int AuthorID { get; set; }
-        public string Name { get; set; }
+        public int Name { get; set; }
         public string ImageUrl { get; set; }
         public string Description { get; set; }
-        public List<Blog> Blogs { get; set; }
+        public List<ResultGetLast3BlogWithAuthorsDto> Blogs { get; set; }
     }
 }
