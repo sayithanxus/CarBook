@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace CarBook.Application.Interfaces
 {
-    public interface IBlogRepository
+    public interface ICarPricingRepository
     {
-        public List<Blog> GetLast3BlogWithAuthors();
-        public List<Blog> GetAllBlogsWithAuthors();
+        List<CarPricing> GetCarPricingWithCars();
     }
 }

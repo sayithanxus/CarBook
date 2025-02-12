@@ -19,17 +19,17 @@ namespace CarBook.WebApi.Controllers
 		private readonly GetCarWithBrandQueryHandler _getCarWithBrandQueryHandler;
 		private readonly GetLast5CarsWithBrandQureyHandler _getLast5CarsWithBrandQureyHandler;
 
-		public CarsController(CreateCarCommandHandler createCarCommandHandler, GetCarByIdQueryHandler getCarByIdCommandHandler, GetCarQueryHandler getCarCommandHandler, UpdateCarCommandHandler updateCarCommandHandler, RemoveCarCommandHandler removeCarCommandHandler, GetCarWithBrandQueryHandler getCarWithBrandQueryHandler, GetLast5CarsWithBrandQureyHandler getLast5CarsWithBrandQureyHandler)
-		{
-			_createCarCommandHandler = createCarCommandHandler;
-			_getCarByIdCommandHandler = getCarByIdCommandHandler;
-			_getCarCommandHandler = getCarCommandHandler;
-			_updateCarCommandHandler = updateCarCommandHandler;
-			_removeCarCommandHandler = removeCarCommandHandler;
-			_getCarWithBrandQueryHandler = getCarWithBrandQueryHandler;
-			_getLast5CarsWithBrandQureyHandler = getLast5CarsWithBrandQureyHandler;
-		}
-		[HttpGet]
+        public CarsController(CreateCarCommandHandler createCarCommandHandler, GetCarByIdQueryHandler getCarByIdCommandHandler, GetCarQueryHandler getCarCommandHandler, UpdateCarCommandHandler updateCarCommandHandler, RemoveCarCommandHandler removeCarCommandHandler, GetCarWithBrandQueryHandler getCarWithBrandQueryHandler, GetLast5CarsWithBrandQureyHandler getLast5CarsWithBrandQureyHandler)
+        {
+            _createCarCommandHandler = createCarCommandHandler;
+            _getCarByIdCommandHandler = getCarByIdCommandHandler;
+            _getCarCommandHandler = getCarCommandHandler;
+            _updateCarCommandHandler = updateCarCommandHandler;
+            _removeCarCommandHandler = removeCarCommandHandler;
+            _getCarWithBrandQueryHandler = getCarWithBrandQueryHandler;
+            _getLast5CarsWithBrandQureyHandler = getLast5CarsWithBrandQureyHandler;
+        }
+        [HttpGet]
 		public async Task<IActionResult> CarList()
 		{
 			var values = await _getCarCommandHandler.Handle();
