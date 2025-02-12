@@ -2,11 +2,6 @@
 using CarBook.Application.Features.Mediator.Results.BlogResults;
 using CarBook.Application.Interfaces;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CarBook.Application.Features.Mediator.Handlers.BlogHandlers
 {
@@ -28,6 +23,7 @@ namespace CarBook.Application.Features.Mediator.Handlers.BlogHandlers
                 AuthorName = x.Author.Name,
                 BlogID = x.BlogID,
                 Title = x.Title,
+                Description = x.Description,
                 CategoryID = x.CategoryID,
                 CategoryName = x.Category.Name,
                 CoverImageUrl = x.CoverImageUrl,
