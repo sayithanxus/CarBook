@@ -20,7 +20,7 @@ namespace CarBook.WebUI.ViewComponents.BlogViewComponents
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
-                var values = JsonConvert.DeserializeObject<List<ResultTagCloudDto>>(jsonData);
+                var values = JsonConvert.DeserializeObject<List<GetTagCloudByBlogIdDto>>(jsonData);
                 return View(values);
             }
             return View();

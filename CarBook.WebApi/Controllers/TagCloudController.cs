@@ -16,6 +16,12 @@ namespace CarBook.WebApi.Controllers
         {
             _mediator = mediator;
         }
+        [HttpGet("TagCloudByBlogIdList")]
+        public async Task<IActionResult> TagCloudByBlogIdList(int id)
+        {
+            var values = await _mediator.Send(new GetTagCloudByBlogIdQuery(id));
+            return Ok(values);
+        }
         [HttpGet]
         public async Task<IActionResult> TagCloudList()
         {
