@@ -14,6 +14,8 @@ namespace CarBook.Dto.BlogDto
         public string Description { get; set; }
         public string authorName { get; set; }
         public int authorID { get; set; }
+        public string AuthorImageUrl { get; set; }
+        public string AuthorDescription { get; set; }
         public string coverImageUrl { get; set; }
         public DateTime createdDate { get; set; }
         public int categoryID { get; set; }
