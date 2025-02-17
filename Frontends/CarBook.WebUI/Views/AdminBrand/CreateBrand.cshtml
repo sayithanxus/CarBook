@@ -1,0 +1,29 @@
+﻿@model CreateBrandDto
+@{
+    ViewData["Title"] = "CreateBrand";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+
+                        <h4 class="card-title">Yeni Araç Markası Girişi</h4>
+                        <form method="post">
+                            <div class="form-group">
+                                <label for="exampleInputName">Marka Adı</label>
+                                <input type="text" class="form-control" id="exampleInputName" asp-for="Name" placeholder="Araç Markası Girişi Yapınız">
+                            </div>
+                            <button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
+                        </form>
+
+                    </div> <!-- end card-body-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
