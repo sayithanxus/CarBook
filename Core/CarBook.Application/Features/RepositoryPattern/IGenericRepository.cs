@@ -8,6 +8,7 @@ namespace CarBook.Application.Features.RepositoryPattern
 {
     public interface IGenericRepository<T> where T : class
     {
+        List<T> GetCommentsByBlogId(int id);
         List<T> GetAll();
         T GetById(int id);
         void Create(T entity);
