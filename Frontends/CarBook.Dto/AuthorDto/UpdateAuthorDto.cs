@@ -1,18 +1,16 @@
-﻿using CarBook.Domain.Entities;
-using MediatR;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarBook.Application.Features.Mediator.Commands.AuthorCommands
+namespace CarBook.Dto.AuthorDto
 {
-    public class CreateAuthorCommand : IRequest
+    public class UpdateAuthorDto
     {
+        public int AuthorID { get; set; }
         public string Name { get; set; }
         public string ImageUrl { get; set; }
         public string Description { get; set; }
-        public List<Blog>? Blogs { get; set; }
     }
 }
