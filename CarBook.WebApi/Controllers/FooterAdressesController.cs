@@ -22,26 +22,26 @@ namespace CarBook.WebApi.Controllers
 			var values = await _mediator.Send(new GetFooterAdressQuery());
 			return Ok(values);
 		}
-		[HttpGet("id")]
-		public async Task<IActionResult> GetFooterAdress(int id)
+		[HttpGet("{id}")]
+		public async Task<IActionResult> GetFooterAdresses(int id)
 		{
 			var values = await _mediator.Send(new GetFooterAdressByIdQuery(id));
 			return Ok(values);
 		}
 		[HttpPost]
-		public async Task<IActionResult> CreateFooterAdress(CreateFooterAdressCommand command)
+		public async Task<IActionResult> CreateFooterAdresses(CreateFooterAdressCommand command)
 		{
 			await _mediator.Send(command);
 			return Ok("Başarıyla Eklendi");
 		}
-		[HttpDelete]
-		public async Task<IActionResult> RemoveFooterAdress(int id)
+		[HttpDelete("{id}")]
+		public async Task<IActionResult> RemoveFooterAdresses(int id)
 		{
 			await _mediator.Send(new RemoveFooterAdressCommand(id));
 			return Ok("Başarıyla Silindi");
 		}
 		[HttpPut]
-		public async Task<IActionResult> UpdateFooterAdress(UpdateFooterAdressCommand command)
+		public async Task<IActionResult> UpdateFooterAdresses(UpdateFooterAdressCommand command)
 		{
 			await _mediator.Send(command);
 			return Ok("Başarıyla Güncellendi");

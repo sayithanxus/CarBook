@@ -1,5 +1,4 @@
-﻿@model List<ResultAboutDto>
-
+﻿@model List<ResultSocialMediaDto>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/AdminLayout/Index.cshtml";
@@ -13,16 +12,16 @@
             <div class="col-xl-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Ana Sayfa Hakkımızda Alanı</h4>
+                        <h4 class="card-title">Sosyal Medya Bilgisi Alanı</h4>
                         <div class="table-responsive">
                             <table class="table mb-0">
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Başlık</th>
-                                        <th>Açıklama</th>
+                                        <th>Adı</th>
                                         <th>Sil</th>
                                         <th>Güncelle</th>
+                                        <th>Aç</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -31,16 +30,15 @@
                                         count++;
                                         <tr>
                                             <th scope="row">@count</th>
-                                            <td>@item.title</td>
-                                            <td>@item.description</td>
-                                            <td>@item.imageUrl</td>
-                                            <td><a href="/Admin/AdminAbout/RemoveAbout/@item.aboutID" class="btn btn-outline-danger">Sil</a></td>
-                                            <td><a href="/Admin/AdminAbout/UpdateAbout/@item.aboutID" class="btn btn-outline-success">Güncelle</a></td>
+                                            <td>@item.Name</td>
+                                            <td><a href="/Admin/AdminSocialMedia/RemoveSocialMedia/@item.SocialMediaID" class="btn btn-outline-danger">Sil</a></td>
+                                            <td><a href="/Admin/AdminSocialMedia/UpdateSocialMedia/@item.SocialMediaID" class="btn btn-outline-success">Güncelle</a></td>
+                                            <td><a href="@item.Url" class="btn btn-outline-dark">Aç</a></td>
                                         </tr>
                                     }
                                 </tbody>
                             </table>
-                            <a href="/Admin/AdminAbout/CreateAbout/" class="btn btn-outline-primary">Yeni Hakkımızda Alanı Girişi</a>
+                            <a href="/Admin/AdminSocialMedia/CreateSocialMedia/" class="btn btn-outline-primary">Yeni Sosyal Medya Bilgisi Girişi</a>
                         </div>
                     </div>
                 </div>
@@ -48,6 +46,7 @@
         </div>
     </div>
 </div>
+
 
 
 

@@ -18,31 +18,31 @@ namespace CarBook.WebApi.Controllers
 			_mediator = mediator;
 		}
 		[HttpGet]
-		public async Task<IActionResult> LocationList()
+		public async Task<IActionResult> LocationsList()
 		{
 			var values = await _mediator.Send(new GetLocationQuery());
 			return Ok(values);
 		}
-		[HttpGet("id")]
-		public async Task<IActionResult> GetLocation(int id)
+		[HttpGet("{id}")]
+		public async Task<IActionResult> GetLocations(int id)
 		{
 			var values = await _mediator.Send(new GetLocationByIdQuery(id));
 			return Ok(values);
 		}
 		[HttpPost]
-		public async Task<IActionResult> CreateLocation(CreateLocationCommand command)
+		public async Task<IActionResult> CreateLocations(CreateLocationCommand command)
 		{
 			await _mediator.Send(command);
 			return Ok("Başarıyla Eklendi");
 		}
-		[HttpDelete]
-		public async Task<IActionResult> RemoveLocation(int id)
+		[HttpDelete("{id}")]
+		public async Task<IActionResult> RemoveLocations(int id)
 		{
 			await _mediator.Send(new RemoveLocationCommand(id));
 			return Ok("Başarıyla Silindi");
 		}
 		[HttpPut]
-		public async Task<IActionResult> UpdateLocation(UpdateLocationCommand command)
+		public async Task<IActionResult> UpdateLocations(UpdateLocationCommand command)
 		{
 			await _mediator.Send(command);
 			return Ok("Başarıyla Güncellendi");

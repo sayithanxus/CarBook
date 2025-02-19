@@ -1,10 +1,8 @@
-﻿@model CreateAuthorDto
+﻿@model CreateSocialMediaDto
 @{
-    ViewData["Title"] = "CreateAuthor";
+    ViewData["Title"] = "CreateSocialMedia";
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
-
-
 <div class="page-content">
     <div class="container-fluid">
         <div class="row">
@@ -12,28 +10,33 @@
                 <div class="card">
                     <div class="card-body">
 
-                        <h4 class="card-title">Yeni Yazar Bilgisi Girişi</h4>
+                        <h4 class="card-title">Yeni Sosyal Medya Bilgisi Girişi</h4>
                         <form method="post">
                             <div class="form-group">
-                                <label for="exampleInputName">Yazar Adı</label>
+                                <label for="exampleInputName">Sosyal Medya Adı</label>
                                 <input type="text" class="form-control" id="exampleInputName" asp-for="Name">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputDescription">Açıklama</label>
-                                <input type="text" class="form-control" id="exampleInputDescription" asp-for="Description">
+                                <label for="exampleInputUrl">URL</label>
+                                <input type="text" class="form-control" id="exampleInputUrl" asp-for="Url">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputVideoUrl">Resim URL</label>
-                                <input type="text" class="form-control" id="exampleInputVideoUrl" asp-for="ImageUrl">
+                                <label for="exampleInputIcon">İkon</label>
+                                <input type="text" class="form-control" id="exampleInputIcon" asp-for="Icon">
                             </div>
                             <button type="submit" class="btn btn-primary waves-effect waves-light">Kaydet</button>
                         </form>
 
-                    </div> <!-- end card-body-->
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
+
+
+
 
 

@@ -1,9 +1,8 @@
-﻿@model List<ResultAboutDto>
-
+﻿
+@model List<ResultTestimonialDto>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/AdminLayout/Index.cshtml";
-    int count = 0;
 }
 
 
@@ -13,14 +12,15 @@
             <div class="col-xl-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Ana Sayfa Hakkımızda Alanı</h4>
+                        <h4 class="card-title">Referans Bilgisi Alanı</h4>
                         <div class="table-responsive">
                             <table class="table mb-0">
                                 <thead>
                                     <tr>
                                         <th>#</th>
+                                        <th>Ad Soyad</th>
                                         <th>Başlık</th>
-                                        <th>Açıklama</th>
+                                        <th>Yorum</th>
                                         <th>Sil</th>
                                         <th>Güncelle</th>
                                     </tr>
@@ -28,19 +28,18 @@
                                 <tbody>
                                     @foreach (var item in Model)
                                     {
-                                        count++;
                                         <tr>
-                                            <th scope="row">@count</th>
+                                            <th scope="row"><img src="@item.imageUrl" width="50" height="50" style="margin-right:10px" /> </th>
+                                            <td>@item.name</td>
                                             <td>@item.title</td>
-                                            <td>@item.description</td>
-                                            <td>@item.imageUrl</td>
-                                            <td><a href="/Admin/AdminAbout/RemoveAbout/@item.aboutID" class="btn btn-outline-danger">Sil</a></td>
-                                            <td><a href="/Admin/AdminAbout/UpdateAbout/@item.aboutID" class="btn btn-outline-success">Güncelle</a></td>
+                                            <td>@item.comment</td>
+                                            <td><a href="/Admin/AdminTestimonial/RemoveTestimonial/@item.testimonialID" class="btn btn-outline-danger">Sil</a></td>
+                                            <td><a href="/Admin/AdminTestimonial/UpdateTestimonial/@item.testimonialID" class="btn btn-outline-success">Güncelle</a></td>
                                         </tr>
                                     }
                                 </tbody>
                             </table>
-                            <a href="/Admin/AdminAbout/CreateAbout/" class="btn btn-outline-primary">Yeni Hakkımızda Alanı Girişi</a>
+                            <a href="/Admin/AdminTestimonial/CreateTestimonial/" class="btn btn-outline-primary">Yeni Referans Bilgisi Girişi</a>
                         </div>
                     </div>
                 </div>
@@ -48,6 +47,8 @@
         </div>
     </div>
 </div>
+
+
 
 
 

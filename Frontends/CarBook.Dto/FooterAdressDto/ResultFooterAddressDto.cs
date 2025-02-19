@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CarBook.Dto.FooterAdressDto
 {
-    public class ResultFooterAdressDto
+    public class ResultFooterAddressDto
     {
         public int FooterAddressID { get; set; }
         public string Description { get; set; }

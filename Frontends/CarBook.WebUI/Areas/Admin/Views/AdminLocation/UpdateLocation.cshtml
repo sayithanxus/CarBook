@@ -1,6 +1,6 @@
-﻿@model UpdateCategoryDto
+﻿@model UpdateLocationDto
 @{
-    ViewData["Title"] = "UpdateCategory";
+    ViewData["Title"] = "UpdateLocation";
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
@@ -11,17 +11,17 @@
                 <div class="card">
                     <div class="card-body">
 
-                        <h4 class="card-title">Yeni Blog Kategorisi Girişi</h4>
+                        <h4 class="card-title"> Ödeme Türü Güncelleme Sayfası</h4>
                         <form method="post">
-                            <input type="hidden" asp-for="categoryID">
+                            <input type="hidden" asp-for="LocationID" />
                             <div class="form-group">
-                                <label for="exampleInputName">Kategori Adı</label>
-                                <input type="text" class="form-control" id="exampleInputName" asp-for="name">                               
+                                <label for="exampleInputName">Konum Bilgisi Adı</label>
+                                <input type="text" class="form-control" id="exampleInputName" asp-for="Name">
                             </div>
                             <button type="submit" class="btn btn-primary waves-effect waves-light">Kaydet</button>
                         </form>
 
-                    </div> <!-- end card-body-->
+                    </div>
                 </div>
             </div>
         </div>
