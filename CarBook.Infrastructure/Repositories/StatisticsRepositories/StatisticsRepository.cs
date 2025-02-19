@@ -36,17 +36,13 @@ namespace CarBook.Persistence.Repositories.StatisticsRepositories
 
         public string BrandNameByMaxCar()
         {
-            var brandIdWithMaxCars = _context.Cars
-                .GroupBy(c => c.BrandID)
-                .OrderByDescending(g => g.Count())
-                .Select(g => g.Key)
-                .FirstOrDefault();
-
-            var brandName = _context.Brands
-                .Where(b => b.BrandID == brandIdWithMaxCars)
-                .Select(b => b.Name)
-                .FirstOrDefault();
-
+            var values = _context.Cars.GroupBy(x => x.BrandID).
+                            Select(y => new
+                            {
+                                BrandID = y.Key,
+                                Count = y.Count()
+                            }).OrderByDescending(z => z.Count).Take(1).FirstOrDefault();
+            string brandName = _context.Brands.Where(x => x.BrandID == values.BrandID).Select(y => y.Name).FirstOrDefault();
             return brandName;
         }
 
