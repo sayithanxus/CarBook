@@ -16,8 +16,6 @@ namespace CarBook.WebUI.Controllers
 
             var locationID = TempData["locationID"];
 
-            //filterRentACarDto.locationID = int.Parse(locationID.ToString());
-            //filterRentACarDto.available = true;
             id = int.Parse(locationID.ToString());
 
             ViewBag.locationID = locationID;
