@@ -14,5 +14,6 @@ namespace CarBook.Application.Features.RepositoryPattern
         void Create(T entity);
         void Update(T entity);
         void Remove(int id);
+        public int GetCountCommentByBlog(int id);
     }
 }

@@ -1,6 +1,8 @@
 ﻿using CarBook.Dto.BlogDto;
+using CarBook.Dto.CommentsDto;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using System.Text;
 
 namespace CarBook.WebUI.Controllers
 {
@@ -32,6 +34,26 @@ namespace CarBook.WebUI.Controllers
             ViewBag.v1 = "Blogs";
             ViewBag.v2 = "Blog's Detail and Comments";
             ViewBag.blogid = id;
+            return View();
+        }
+        [HttpGet]
+        public PartialViewResult AddComment(int id)
+        {
+            ViewBag.blogid = id;
+            return PartialView();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddComment(CreateCommentDto createCommentDto)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var jsonData = JsonConvert.SerializeObject(createCommentDto);
+            StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
+            var responseMessage = await client.PostAsync("https://localhost:7173/api/Comments/CreateCommentWithMediator", stringContent);
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                return RedirectToAction("BlogDetail", "Blog", new { id = createCommentDto.BlogID });
+            }
             return View();
         }
     }

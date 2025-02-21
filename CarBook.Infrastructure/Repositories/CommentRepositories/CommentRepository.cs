@@ -28,11 +28,12 @@ namespace CarBook.Persistence.Repositories.CommentRepositories
         {
             return _context.Comments.Select(x=> new Comment
             {
-                CommentId=x.CommentId,
+                CommentID=x.CommentID,
                 CreatedDate=x.CreatedDate,
                 BlogID=x.BlogID,
                 Description=x.Description,
-                Name=x.Name
+                Name=x.Name,
+                Email=x.Email
             }).ToList();
         }
 
@@ -57,6 +58,10 @@ namespace CarBook.Persistence.Repositories.CommentRepositories
         {
             _context.Comments.Update(entity);
             _context.SaveChanges();
+        }
+        public int GetCountCommentByBlog(int id)
+        {
+            return _context.Comments.Where(x => x.BlogID == id).Count();
         }
     }
 }
