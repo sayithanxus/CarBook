@@ -34,7 +34,7 @@ namespace CarBook.WebApi.Controllers
             var values = await _mediator.Send(new GetLast3BlogsWithAuthorsQuery());
             return Ok(values);
         }
-        [HttpGet("id")]
+        [HttpGet("{id}")]
         public async Task<IActionResult> GetBlog(int id)
         {
             var values = await _mediator.Send(new GetBlogByIdQuery(id));
@@ -46,7 +46,7 @@ namespace CarBook.WebApi.Controllers
             await _mediator.Send(command);
             return Ok("Başarıyla Eklendi");
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> RemoveBlog(int id)
         {
             await _mediator.Send(new RemoveBlogCommand(id));

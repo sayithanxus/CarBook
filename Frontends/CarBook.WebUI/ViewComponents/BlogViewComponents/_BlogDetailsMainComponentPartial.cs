@@ -16,12 +16,14 @@ namespace CarBook.WebUI.ViewComponents.BlogViewComponents
 
         public async Task<IViewComponentResult> InvokeAsync(int id)
         {
+            ViewBag.blogid = id;           
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync($"https://localhost:7173/api/Blogs/id?id="+id);
+            var responseMessage = await client.GetAsync($"https://localhost:7173/api/Blogs/" + id);
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
                 var values = JsonConvert.DeserializeObject<GetBlogByIdDto>(jsonData);
+                ViewBag.AuthorID = values.AuthorID;
                 return View(values);
             }
             return View();
