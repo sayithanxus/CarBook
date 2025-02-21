@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarBook.Dto.FeatureDto
+namespace CarBook.Application.Features.Mediator.Results.CarFeatureResults
 {
-    public class ResultFeatureDto
+    public class GetFeaturesNotInCarQueryResult
     {
         public int FeatureID { get; set; }
         public string Name { get; set; }
-        public bool Available { get; set; }
     }
 }

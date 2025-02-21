@@ -1,0 +1,45 @@
+﻿@model CarFeatureViewModel
+
+@{
+    ViewData["Title"] = "CreateFeatureByCarId";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Araca Ait Özellikler Ekleme Sayfası</h4>
+                        <p class="card-subtitle mb-4">
+                            Araca ait özellik tanımlaması yapılacak sayfadır.
+                        </p>
+                        <form asp-action="CreateFeatureByCarId" method="post">
+                            <input type="hidden" asp-for="CreateCarFeature.CarID" />
+
+                            <div class="form-group">
+                                @if (Model.Features != null)
+                                {
+                                    @for (int i = 0; i < Model.Features.Count; i++)
+                                    {
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" asp-for="@Model.Features[i].Available" />
+                                                @Model.Features[i].Name
+                                                <input type="hidden" asp-for="@Model.Features[i].FeatureID" />
+                                                <input type="hidden" asp-for="@Model.Features[i].Name" />
+                                            </label>
+                                        </div>
+                                    }
+                                }
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Kaydet</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
