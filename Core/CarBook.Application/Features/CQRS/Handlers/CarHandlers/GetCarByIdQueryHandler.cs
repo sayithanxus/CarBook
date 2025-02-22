@@ -13,21 +13,22 @@ namespace CarBook.Application.Features.CQRS.Handlers.CarHandlers
 {
 	public class GetCarByIdQueryHandler
 	{
-		private readonly IRepository<Car> _repository;
+		private readonly ICarRepository _repository;
 
-		public GetCarByIdQueryHandler(IRepository<Car> repository)
+		public GetCarByIdQueryHandler(ICarRepository repository)
 		{
 			_repository = repository;
 		}
 		public async Task<GetCarByIdQueryResult> Handle(GetCarByIdQuery query)
 		{
-			var values = await _repository.GetByIdAsync(query.Id);
+			var values = await _repository.GetCarByIdWithBrandAsync(query.Id);
 			return new GetCarByIdQueryResult
 			{
 				CarID= values.CarID,
 				BigImageUrl = values.BigImageUrl,
 				BrandID = values.BrandID,
-				Model = values.Model,
+                BrandName=values.Brand.Name,
+                Model = values.Model,
 				Km = values.Km,
 				CoverImgUrl = values.CoverImgUrl,
 				Fuel = values.Fuel,

@@ -24,6 +24,7 @@ namespace CarBook.Application.Features.Mediator.Handlers.CarFeatureHandlers
             return values.Select(x => new GetCarFeatureByCarIdQueryResult
             {
                 Available = x.Available,
+                CarID=x.CarID,
                 CarFeatureID = x.CarFeatureID,
                 FeatureID = x.FeatureID,
                 FeatureName = x.Feature.Name
