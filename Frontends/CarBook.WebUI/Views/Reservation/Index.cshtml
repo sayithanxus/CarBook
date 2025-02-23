@@ -4,43 +4,64 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/UILayout/Index.cshtml";
 }
+<section class="ftco-section contact-section">
+    <div class="container">
+        <div class="row d-flex mb-5 contact-info">        
+            <div class="col-md-12 block-9 mb-md-5">
+                <form method="post" class="bg-light p-5 contact-form">
+                    <input type="hidden" asp-for="CarID" />
+                    <div style="text-align:center" class="form-group">
+                        <h3 class="form-label">Kiralamak İstediğiniz Araba</h3>
+                      <br />
+                        <img height="300" width="480" src="@ViewBag.carImage" />
+                      <br />
+                      <h5>@ViewBag.car</h5>
 
-<div class="col-md-12 block-9 mb-md-5">
-
-    <form class="bg-light p-5 contact-form" method="post">
-        <h3 class="alert alert-success">Araç Rezervasyon Formu</h3>
-        <br />
-        <input type="hidden" asp-for="CarID" value="@ViewBag.v3" class="form-control" placeholder="Almak İstediğiniz Araba">
-        <div class="form-group">
-            <input type="text" asp-for="Name" class="form-control" placeholder="Adınız">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Ad</label>
+                        <input type="text" asp-for="Name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Soyad</label>
+                        <input type="text" asp-for="Surname" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Yaş</label>
+                        <input type="number" asp-for=Age class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Ehliyet Yılınız</label>
+                        <input type="number" asp-for=DriverLicenseYear class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">E-posta</label>
+                        <input type="email" asp-for="Email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Telefon</label>
+                        <input type="text" asp-for="Phone" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Almak İstediğiniz Lokasyon</label>
+                        <select class="form-control" asp-for="PickUpLocationID" asp-items="@ViewBag.pickUpLocation"></select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Almak İstediğiniz Lokasyon</label>
+                        <select class="form-control" asp-for="DropOffLocationID" asp-items="@ViewBag.dropOffLocation"></select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Ek Bilgi (Zorunlu Değil)</label>
+                        <textarea cols="30" rows="7" asp-for="Description" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <span><input type="checkbox" required /> <a href="">Kullanım koşulları</a> ve <a href="">Gizlilik Politikaları</a>nı okudum, anladım ve onaylıyorum.</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Gönder" class="btn btn-primary py-3 px-5">
+                    </div>
+                </form>
+            </div>
         </div>
-        <div class="form-group">
-            <input type="text" asp-for="Surname" class="form-control" placeholder="Soyadınız">
-        </div>
-        <div class="form-group">
-            <input type="text" asp-for="Email" class="form-control" placeholder="Mail Adresiniz">
-        </div>
-        <div class="form-group">
-            <input type="text" asp-for="Phone" class="form-control" placeholder="Telefon Numaranız">
-        </div>
-        <div class="form-group">
-            @Html.DropDownListFor(x => x.DropOffLocationID, (List<SelectListItem>)ViewBag.v, new { @class = "form-control" })
-        </div>
-        <div class="form-group">
-            @Html.DropDownListFor(x => x.PickUpLocationID, (List<SelectListItem>)ViewBag.v, new { @class = "form-control" })
-        </div>
-        <div class="form-group">
-            <input type="text" asp-for="Age" class="form-control" placeholder="Yaşınız">
-        </div>
-        <div class="form-group">
-            <input type="text" asp-for="DriverLicenseYear" class="form-control" placeholder="Ehliyet Yılınız">
-        </div>
-        <div class="form-group">
-            <textarea asp-for="Description" id="" cols="30" rows="7" class="form-control" placeholder="Varsa Eklemek İstedikleriniz"></textarea>
-        </div>
-        <div class="form-group">
-            <input type="submit" value="Rezervasyonu Tamamla" class="btn btn-primary py-3 px-5">
-        </div>
-    </form>
-
-</div>
+    </div>
+</section>

@@ -31,30 +31,5 @@
 
             </div>
         </div>
-        <div class="row justify-content-center">
-            <div class="col-md-12">
-                <div id="map" class="bg-white" style="height: 400px;"></div>
-            </div>
-        </div>
     </div>
 </section>
-<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
-<script>
-    function initMap() {
-        // Çorlu'nun koordinatları
-        var corluLocation = { lat: 41.1592, lng: 27.8000 };
-
-        // Harita oluşturma
-        var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 12, // Yakınlaştırma seviyesi
-            center: corluLocation // Haritanın merkezi
-        });
-
-        // İşaretçi (Marker) ekleme
-        var marker = new google.maps.Marker({
-            position: corluLocation,
-            map: map,
-            title: 'Çorlu, Tekirdağ' // İşaretçi üzerinde görünecek başlık
-        });
-    }
-</script>
