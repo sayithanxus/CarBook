@@ -23,11 +23,11 @@ Bu proje, bir araç kiralama platformu olarak tasarlandı. Kullanıcılar, belir
 * 📝 Ado.Net ve Linq Sorguları ile veri erişimi sağlandı.
 
 # Veritabanı
-![Veritabanı](https://github.com/sayithanxus/CarBook/blob/master/Frontends/CarBook.WebUI/wwwroot/ProjectProjectImages/DatabaseDiagram.png?raw=true)
+![Veritabanı](https://github.com/sayithanxus/CarBook/blob/master/Frontends/CarBook.WebUI/wwwroot/ProjectImages/DatabaseDiagram.png?raw=true)
 ### Giriş
-![](https://github.com/sayithanxus/CarBook/blob/master/Frontends/CarBook.WebUI/wwwroot/ProjectProjectImages/Login.png?raw=true)
+![](https://github.com/sayithanxus/CarBook/blob/master/Frontends/CarBook.WebUI/wwwroot/ProjectImages/Login.png?raw=true)
 ### Yeni Üyelik
-![](https://github.com/sayithanxus/CarBook/blob/master/Frontends/CarBook.WebUI/wwwroot/ProjectProjectImages/Register.png?raw=true)
+![](https://github.com/sayithanxus/CarBook/blob/master/Frontends/CarBook.WebUI/wwwroot/ProjectImages/Register.png?raw=true)
 
 ### Yönetim Paneli
 #### Dashboard
