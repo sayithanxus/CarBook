@@ -55,4 +55,13 @@ Bu proje, bir araç kiralama platformu olarak tasarlandı. Kullanıcılar, belir
 ![](https://github.com/sayithanxus/CarBook/blob/master/Frontends/CarBook.WebUI/wwwroot/ProjectImages/blogdetail1.png?raw=true)
 ##### Blog Detayları 2
 ![](https://github.com/sayithanxus/CarBook/blob/master/Frontends/CarBook.WebUI/wwwroot/ProjectImages/blogdetail2.png?raw=true)
-
+#### Araçlar
+![](https://github.com/sayithanxus/CarBook/blob/master/Frontends/CarBook.WebUI/wwwroot/ProjectImages/car_list.png?raw=true)
+##### Araç Detay 
+![](https://github.com/sayithanxus/CarBook/blob/master/Frontends/CarBook.WebUI/wwwroot/ProjectImages/car_detail.png?raw=true)
+##### Araç Fiyatları
+![](https://github.com/sayithanxus/CarBook/blob/master/Frontends/CarBook.WebUI/wwwroot/ProjectImages/car_price.png?raw=true)
+##### Araç Kiralama
+![](https://github.com/sayithanxus/CarBook/blob/master/Frontends/CarBook.WebUI/wwwroot/ProjectImages/reservation.png?raw=true)
+#### İletişim Sayfası
+![](https://github.com/sayithanxus/CarBook/blob/master/Frontends/CarBook.WebUI/wwwroot/ProjectImages/contacts.png?raw=true)
