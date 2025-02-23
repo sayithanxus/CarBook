@@ -22,3 +22,36 @@ Bu proje, bir araç kiralama platformu olarak tasarlandı. Kullanıcılar, belir
 * 🧱 İç içe layout ve ViewComponent yapıları sıkça kullanıldı.
 * 📝 Ado.Net ve Linq Sorguları ile veri erişimi sağlandı.
 
+# Veritabanı
+![Veritabanı](https://github.com/sayithanxus/CarBook/blob/master/Frontends/CarBook.WebUI/wwwroot/ProjectImages/DatabaseDiagram.png?raw=true)
+### Giriş
+![](https://github.com/sayithanxus/CarBook/blob/master/Frontends/CarBook.WebUI/wwwroot/ProjectImages/Login.png?raw=true)
+### Yeni Üyelik
+![](https://github.com/sayithanxus/CarBook/blob/master/Frontends/CarBook.WebUI/wwwroot/ProjectImages/Register.png?raw=true)
+
+### Yönetim Paneli
+#### Dashboard
+![](https://github.com/sayithanxus/CarBook/blob/master/Frontends/CarBook.WebUI/wwwroot/ProjectImages/dashboard.png?raw=true)
+#### İstatistikler
+![](https://github.com/sayithanxus/CarBook/blob/master/Frontends/CarBook.WebUI/wwwroot/ProjectImages/statistics.png?raw=true)
+#### Araçlar
+![](https://github.com/sayithanxus/CarBook/blob/master/Frontends/CarBook.WebUI/wwwroot/ProjectImages/cars.png?raw=true)
+#### Bloglar
+![](https://github.com/sayithanxus/CarBook/blob/master/Frontends/CarBook.WebUI/wwwroot/ProjectImages/blogs.png?raw=true)
+#### Blogların Kategorileri
+![](https://github.com/sayithanxus/CarBook/blob/master/Frontends/CarBook.WebUI/wwwroot/ProjectImages/BlogsCategory.png?raw=true)
+#### Lokasyonlar
+![](https://github.com/sayithanxus/CarBook/blob/master/Frontends/CarBook.WebUI/wwwroot/ProjectImages/location.png?raw=true)
+
+#### Ana Ekran
+![](https://github.com/sayithanxus/CarBook/blob/master/Frontends/CarBook.WebUI/wwwroot/ProjectImages/1.png?raw=true)
+######
+![](https://github.com/sayithanxus/CarBook/blob/master/Frontends/CarBook.WebUI/wwwroot/ProjectImages/2.png?raw=true)
+######
+![](https://github.com/sayithanxus/CarBook/blob/master/Frontends/CarBook.WebUI/wwwroot/ProjectImages/3.png?raw=true)
+######
+![](https://github.com/sayithanxus/CarBook/blob/master/Frontends/CarBook.WebUI/wwwroot/ProjectImages/4.png?raw=true)
+######
+![](https://github.com/sayithanxus/CarBook/blob/master/Frontends/CarBook.WebUI/wwwroot/ProjectImages/5.png?raw=true)
+######
+![](https://github.com/sayithanxus/CarBook/blob/master/Frontends/CarBook.WebUI/wwwroot/ProjectImages/6.png?raw=true)
