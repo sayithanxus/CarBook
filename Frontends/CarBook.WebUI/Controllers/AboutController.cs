@@ -6,8 +6,8 @@ namespace CarBook.WebUI.Controllers
 	{
 		public IActionResult Index()
 		{
-			ViewBag.v1 = "About";
-			ViewBag.v2 = "About Us";
+			ViewBag.v1 = "Hakkımızda";
+			ViewBag.v2 = "Bizim Hakkımızda";
 
 
             return View();

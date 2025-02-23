@@ -21,13 +21,19 @@ namespace CarBook.Persistence.Repositories.CarRepositories
         }
         public List<Car> GetCarsListWithBrands()
         {
-            var values = _context.Cars.Include(x => x.Brand).ToList();
+            var values = _context.Cars.Include(x => x.Brand).Include(y=> y.CarPricings).ThenInclude(y => y.Pricing).ToList();
             return values;
         }
 
         public List<Car> GetLast5CarsWithBrands()
         {
-            var values = _context.Cars.Include(x => x.Brand).OrderByDescending(x => x.CarID).Take(5).ToList();
+            var values = _context.Cars
+                                 .Include(x => x.Brand) // Brand ilişkisini dahil et
+                                 .Include(x => x.CarPricings) // CarPricings ilişkisini dahil et
+                                 .ThenInclude(x => x.Pricing) 
+                                 .OrderByDescending(x => x.CarID)
+                                 .Take(5)
+                                 .ToList();
             return values;
         }
         public async Task<Car> GetCarByIdWithBrandAsync(int id)

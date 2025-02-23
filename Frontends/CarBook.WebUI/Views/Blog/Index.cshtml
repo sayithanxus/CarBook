@@ -4,7 +4,6 @@
     Layout = "~/Views/UILayout/Index.cshtml";
 }
 
-
 <section class="ftco-section">
     <div class="container">
         <div class="row d-flex justify-content-center">
@@ -12,7 +11,7 @@
             {
                 <div class="col-md-12 text-center d-flex ftco-animate">
                     <div class="blog-entry justify-content-end mb-md-5">
-                        <a href="blog-single.html" class="block-20 img" style="background-image: url('@item.coverImageUrl');">
+                        <a href="/Blog/BlogDetail/@item.blogID" class="block-20 img" style="background-image: url('@item.coverImageUrl'); height: 300px; background-size: cover; background-position: center;">
                         </a>
                         <div class="text px-md-5 pt-4">
                             <div class="meta mb-3">
@@ -20,17 +19,27 @@
                                 <div><a href="#">@item.authorName</a></div>
                                 <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                             </div>
-                            <h3 class="heading mt-2"><a href="#">@item.title</a></h3>
-                            <p>@item.Description</p>
-                            <p><a href="/Blog/BlogDetail/@item.blogID" class="btn btn-primary">Continue <span class="icon-long-arrow-right"></span></a></p>
+                            <h3 class="heading mt-2"><a href="/Blog/BlogDetail/@item.blogID">@item.title</a></h3>
+                            <p>
+                                @{
+                                    // Description özelliği null değilse ve uzunluğu 150'den büyükse
+                                    if (!string.IsNullOrEmpty(item.Description) && item.Description.Length > 150)
+                                    {
+                                        @item.Description.Substring(0, 150)
+                                        <span>...</span> <!-- Daha fazla olduğunu belirtmek için üç nokta ekleyebilirsiniz -->
+                                    }
+                                    else
+                                    {
+                                        // Description özelliği null veya 150 karakterden kısa ise
+                                        @item.Description
+                                    }
+                                }
+                            </p>
+                            <p><a href="/Blog/BlogDetail/@item.blogID" class="btn btn-primary">Devamını Oku <span class="icon-long-arrow-right"></span></a></p>
                         </div>
                     </div>
                 </div>
             }
-
         </div>
     </div>
 </section>
-
-
-

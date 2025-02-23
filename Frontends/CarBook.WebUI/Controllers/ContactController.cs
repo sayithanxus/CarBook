@@ -16,11 +16,14 @@ namespace CarBook.WebUI.Controllers
         [HttpGet]
         public IActionResult Index()
         {
+            ViewBag.v1 = "İletişim";
+            ViewBag.v2 = "İletişime Geç";
             return View();
         }
         [HttpPost]
         public async Task<IActionResult> Index(CreateContactDto dto)
         {
+            
             var client =_httpClientFactory.CreateClient();
             dto.SendDate = DateTime.Now;
             var jsonData=JsonConvert.SerializeObject(dto);

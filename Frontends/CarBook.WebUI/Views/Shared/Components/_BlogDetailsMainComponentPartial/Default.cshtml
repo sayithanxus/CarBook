@@ -3,7 +3,9 @@
 <div class="col-md-8 ftco-animate">
     <h2 class="mb-3">@Model.Title</h2>
     <p>@Model.Description</p>
-   
+    <a href="#" class="block-20 img" style="background-image: url('@Model.CoverImageUrl'); height: 300px; background-size: cover; background-position: center;">
+    </a>
+
     @await Component.InvokeAsync("_BlogDetailCloudTagByBlogComponentPartial", new { id = ViewBag.blogid })
 
     @await Component.InvokeAsync("_BlogDetailsAuthorAboutComponentPartial", new { id =  ViewBag.AuthorID}) 

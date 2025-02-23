@@ -16,8 +16,8 @@ namespace CarBook.WebUI.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            ViewBag.v1 = "Blogs";
-            ViewBag.v2 = "Blogs of Authors";
+            ViewBag.v1 = "Bloglar";
+            ViewBag.v2 = "Tüm Bloglar";
 
             var client = _httpClientFactory.CreateClient();
             var responseMessage = await client.GetAsync("https://localhost:7173/api/Blogs/GetAllBlogsWithAuthorList");
@@ -31,8 +31,8 @@ namespace CarBook.WebUI.Controllers
         }
         public async Task<IActionResult> BlogDetail(int id)
         {
-            ViewBag.v1 = "Blogs";
-            ViewBag.v2 = "Blog's Detail and Comments";
+            ViewBag.v1 = "Bloglar";
+            ViewBag.v2 = "Blog Detayı ";
             ViewBag.blogid = id;
             return View();
         }

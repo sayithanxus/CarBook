@@ -7,23 +7,25 @@
 <section class="ftco-section contact-section">
     <div class="container">
         <div class="row d-flex mb-5 contact-info">
+
             @await Component.InvokeAsync("_FooterAdressUILayoutComponentPartial")
+
             <div class="col-md-8 block-9 mb-md-5">
-                <form  class="bg-light p-5 contact-form" method="post">
+                <form class="bg-light p-5 contact-form" method="post">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Your Name" asp-for="Name">
+                        <input type="text" class="form-control" placeholder="Adınız soyadınız" asp-for="Name">
                     </div>
                     <div class="form-group">
-                        <input type="email" class="form-control" placeholder="Your Email" asp-for="Email">
+                        <input type="email" class="form-control" placeholder="Email Adresiniz" asp-for="Email">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Subject" asp-for="Subject">
+                        <input type="text" class="form-control" placeholder="Konu" asp-for="Subject">
                     </div>
                     <div class="form-group">
-                        <textarea  cols="30" rows="7" class="form-control" placeholder="Message" asp-for="Message"></textarea>
+                        <textarea asp-for="Message" cols="30" rows="7" class="form-control" placeholder="Mesajınız"></textarea>
                     </div>
                     <div class="form-group">
-                        <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+                        <input type="submit" value="Mesajı Gönder" class="btn btn-primary py-3 px-5">
                     </div>
                 </form>
 
@@ -31,8 +33,28 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-md-12">
-                <div id="map" class="bg-white"></div>
+                <div id="map" class="bg-white" style="height: 400px;"></div>
             </div>
         </div>
     </div>
 </section>
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+<script>
+    function initMap() {
+        // Çorlu'nun koordinatları
+        var corluLocation = { lat: 41.1592, lng: 27.8000 };
+
+        // Harita oluşturma
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 12, // Yakınlaştırma seviyesi
+            center: corluLocation // Haritanın merkezi
+        });
+
+        // İşaretçi (Marker) ekleme
+        var marker = new google.maps.Marker({
+            position: corluLocation,
+            map: map,
+            title: 'Çorlu, Tekirdağ' // İşaretçi üzerinde görünecek başlık
+        });
+    }
+</script>
