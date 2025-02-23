@@ -45,13 +45,14 @@ Bu proje, bir araç kiralama platformu olarak tasarlandı. Kullanıcılar, belir
 
 #### Ana Ekran
 ![](https://github.com/sayithanxus/CarBook/blob/master/Frontends/CarBook.WebUI/wwwroot/ProjectImages/1.png?raw=true)
-######
+###### 1
 ![](https://github.com/sayithanxus/CarBook/blob/master/Frontends/CarBook.WebUI/wwwroot/ProjectImages/2.png?raw=true)
-######
+###### 2
 ![](https://github.com/sayithanxus/CarBook/blob/master/Frontends/CarBook.WebUI/wwwroot/ProjectImages/3.png?raw=true)
-######
-![](https://github.com/sayithanxus/CarBook/blob/master/Frontends/CarBook.WebUI/wwwroot/ProjectImages/4.png?raw=true)
-######
-![](https://github.com/sayithanxus/CarBook/blob/master/Frontends/CarBook.WebUI/wwwroot/ProjectImages/5.png?raw=true)
-######
-![](https://github.com/sayithanxus/CarBook/blob/master/Frontends/CarBook.WebUI/wwwroot/ProjectImages/6.png?raw=true)
+#### Bloglar
+![](https://github.com/sayithanxus/CarBook/blob/master/Frontends/CarBook.WebUI/wwwroot/ProjectImages/blog.png?raw=true)
+##### Blog Detayları
+![](https://github.com/sayithanxus/CarBook/blob/master/Frontends/CarBook.WebUI/wwwroot/ProjectImages/blogdetail1.png?raw=true)
+##### Blog Detayları 2
+![](https://github.com/sayithanxus/CarBook/blob/master/Frontends/CarBook.WebUI/wwwroot/ProjectImages/blogdetail2.png?raw=true)
+
